@@ -1,0 +1,498 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 4.8rem;
+  
+  /*========== Colors ==========*/
+  --title-color: #0B0A0A;
+  --text-color: #403A3A;
+  --text-color-light: #707070;
+  --container-color: #FAFAFA;
+  --container-color-alt: #F0EFEF;
+  --body-color: #FCFCFC;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --h1-font-size: 2.4rem; /* => 24px */
+  --h2-font-size: 2rem; /* => 20px */
+  --h3-font-size: 1.6rem; /* => 16px*/
+  --normal-font-size: 1.5rem ; /* => 15px */
+  --small-font-size: 1.4rem; /* => 14px */
+  --smaller-font-size: 1.3rem; /* => 13px */
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margin ==========*/
+  --mb-1: .8rem;
+  --mb-2: 1.6rem;
+  --mb-3: 2.4rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== BASE ==========*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*========== Font size variables to scale cv ==========*/
+
+
+/*========== Generate PDF button ==========*/
+
+
+/*========== Classes modified to reduce size and print on A4 sheet ==========*/
+body {
+  margin-top: var(--header-height);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,h2,h3 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== CLASS CSS ==========*/
+.section {
+  padding:2rem 1.4rem;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  text-transform: uppercase;
+  letter-spacing: 5.6px;
+
+  /* margin-bottom: var(--mb-3); use in phone and tablet */
+}
+
+/*========== LAYOUT ==========*/
+
+.at-container {
+  max-width:968px;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+  /* margin-left: var(--mb-3);
+  margin-right: var(--mb-3); */
+}
+.at-grid {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+.at-flex {
+  display: flex;
+}
+
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+@media screen and (min-width: 969px) {
+  .l-header {
+    display: none;
+  }
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+.resume__left {
+  padding: 1rem;
+  background-color: var(--container-color-alt);
+}
+.resume__right {
+  padding: 1rem;
+  background-color: var(--container-color);
+}
+
+/*========== NAV ==========*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 968px) {
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background-color: var(--body-color);
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+    border-radius: 1rem 1rem 0 0;
+    z-index: var(--z-fixed);
+    transition: .3s;
+  }
+}
+.nav__logo,
+.nav__toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.6rem;
+}
+.nav__item {
+  text-align: center;
+}
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+}
+.nav__link:hover {
+  color: var(--title-color);
+}
+.nav__link i {
+  font-size: 1.3rem;
+  margin-bottom: var(--mb-1);
+}
+/* Show menu */
+.show-menu {
+  bottom: var(--header-height);
+}
+
+/* Active menu link */
+.active-link {
+  color: var(--title-color);
+}
+
+/*========== HOME ==========*/
+.home {
+
+}
+
+.home__container {
+
+  grid-gap: 4rem;
+}
+.home__data {
+  justify-items: center;
+  text-align: center;
+  grid-gap: .8rem;
+}
+.home__img {
+  width: 10rem;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+
+}
+.home__title {
+  font-size: var(--h1-font-size);
+  text-transform: uppercase;
+  
+}
+.home__profession {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.home__address {
+ 
+}
+.home__information {
+  font-size: var(--normal-font-size);
+}
+.home__icon {
+
+}
+
+/*========== SOCIAL ==========*/
+.social {
+
+}
+.social__container {
+  grid-gap: 1.2rem;
+}
+.social__list {
+  grid-gap: 1rem;
+}
+.social__item {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  transition: opacity .3s ease;
+}
+.social__item:hover {
+  opacity: .8;
+}
+.social__icon {
+  font-size: 1.8rem;
+  margin-right: .4rem;
+}
+
+
+/*========== PROFILE ==========*/
+.profile {
+
+}
+.profile__container {
+  grid-gap: 1.2rem;
+}
+.profile__desc {
+  
+}
+
+/*========== EDUCATION AND EXPERIENCE ==========*/
+
+.education {
+
+}
+.education__container,
+.experience__container {
+  grid-gap: 1.2rem;
+}
+.education__content,
+.experience__content {
+  display: flex;
+}
+.education__time,
+.experience__time {
+  margin-right: 1rem;
+}
+.education__rounder,
+.experience__rounder {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--text-color-light);
+  margin-top: .25rem;
+}
+
+.education__line, 
+.experience__line{
+  display: block;
+  width: 2px;
+  height: 110%;
+  background-color: var(--text-color-light);
+  transform: translate(7px, 0);
+}
+.education__content:last-of-type .education__line,
+.experience__content:last-of-type .experience__line {
+  height: 0%;
+}
+.education__data,
+.experience__data {
+  grid-gap: .5rem;
+}
+.education__title,
+.experience__title {
+  text-transform: uppercase;
+  font-weight: var(--font-medium);
+}
+.experience__studies {
+ 
+}
+.education__studies {
+  font-weight: var(--font-medium);
+}
+.education__year,
+.experience__year {
+  font-style: italic;
+  font-size: var(--small-font-size);
+}
+
+
+/*========== SKILLS AND LANGUAGES ==========*/
+
+.skills {
+
+}
+.skills__container {
+  grid-gap: 1.2rem;
+}
+.skills__list {
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  list-style:disc;
+}
+.skills__item {
+  flex-basis: 50%;
+  margin-right: auto;
+  text-transform: capitalize;
+}
+
+/*========== CERTIFICATES ==========*/
+
+/*========== PROJECTS ==========*/
+.projects {
+
+}
+.projects__container {
+  grid-gap: 1.2rem;
+}
+.projects__group {
+  justify-items: start;
+  grid-gap: .5rem;
+}
+.projects__title {
+  position: relative;
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  transition: all .3s ease;
+
+}
+.projects__title:hover::after{
+    width: 100%;
+}
+.projects__title::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 3px;
+  background-color: var(--text-color-light);
+  transition: all .3s ease;
+}
+.projects__duration {
+  font-style: italic;
+  font-weight: var(--font-regular);
+}
+.projects__details {
+  list-style: disc;
+  padding: 1rem 4rem;
+}
+.projects__item {
+
+}
+
+/*========== REFERENCES ==========*/
+.references {
+
+}
+.references__container {
+  grid-gap: 1.2rem;
+}
+.references__content {
+  grid-template-columns: repeat(2, 1fr);
+}
+.references__group {
+  grid-gap: .5rem;
+}
+.references__position {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-regular);
+}
+.references__name {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+}
+.references__infor {
+  grid-gap: 0rem;
+}
+
+.references__phone,
+.references__email {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-regular);
+} 
+/*========== INTERESTS & LANGUAGES ==========*/
+.languages {
+
+}
+.languages__container {
+  grid-gap: 1.2rem;
+}
+.languages__list {
+  list-style: disc;
+  padding: 0 3rem;
+}
+.languages__item {
+  margin-right: auto;
+}
+
+
+
+.interests {
+
+}
+.interests__container {
+  
+}
+.interests__list {
+
+}
+.interests__item {
+  flex:1;
+  justify-items: center;
+  margin-right: 3rem;
+}
+.interests__icon {
+  font-size: 2rem;
+}
+/* Scroll top */
+
+
+/*========== MEDIA QUERIES ==========*/
+/* For small devices, menu two columns */
+
+
+/* Classes modified for large screen size */
+
