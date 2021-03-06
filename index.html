@@ -85,6 +85,11 @@
 
                                 <h3 class="home__profession">Web developer</h3>
 
+                                <!-- Button to generate and download the pdf. Available for mobile. -->
+                                <div>
+                                    <a download="" href="./assets/pdf/ResumeCv.pdf" class="home__button-download">Download</a>
+                                </div>
+
                             </div>
                             <ul class="home__address at-grid">
                                 <li class="home__information">
@@ -109,10 +114,11 @@
 
                         
                         <!-- Theme change button -->
+                        <i class='bx bx-moon change-theme' title="Theme" id="theme-button"></i>
                         
     
                         <!-- Button to generate and download the pdf. Available for desktop. -->
-
+                        <i class='bx bx-download generate-pdf' title="Generate PDF" id="resume-button"></i>
                     </section>          
                     
                     <!--========== SOCIAL ==========-->
@@ -397,7 +403,9 @@
         </main>
 
         <!--========== SCROLL TOP ==========-->
-        
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
 
         <!--========== HTML2PDF ==========-->
         <script src="assets/js/html2pdf.bundle.min.js"></script>
