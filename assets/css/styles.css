@@ -476,12 +476,12 @@ img {
 }
 .skills__list {
   padding: 0 2rem;
+  justify-content: space-between;
   flex-wrap: wrap;
   list-style:disc;
 }
 .skills__item {
-  flex-basis: 50%;
-  margin-right: auto;
+  flex-basis: 45%;
   text-transform: capitalize;
 }
 
